@@ -24,6 +24,17 @@
   box-sizing: border-box;
 }
 
+.zebra:nth-child(even){
+  background:#DCF3D7;
+}
+
+
+
+
+
+
+
+
 /*
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
