@@ -17,19 +17,22 @@
     font-size: 1em;
     line-height: 1.4;
 }
-
-
+@import url('https://fonts.googleapis.com/css?family=Work+Sans');
 *{
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+h1, h2, h3{
+  font-family: 'Bentham', serif;
+}
+p{
+  font-family:'Work Sans', sans-serif;
+}
 section.zebra:nth-child(even){
   background:#DCF3D7;
 }
-p{
-  font-family: 'Bentham', serif;
-}
+
 .card-1-3-circle{
   width:33%;
   float:left;
