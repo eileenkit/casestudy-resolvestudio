@@ -29,7 +29,9 @@ h1, h2, h3{
 p{
   font-family:'Work Sans', sans-serif;
 }
-
+img{
+  max-width:100%;
+}
 section.zebra:nth-child(even){
   background:#DCF3D7;
 }
