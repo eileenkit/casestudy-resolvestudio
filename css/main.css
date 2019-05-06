@@ -15,7 +15,8 @@
    html {
     color: #222;
     font-size: 1em;
-    line-height: 1.4;
+    line-height: 1.5;
+    background-color:#FAFDF7;
 }
 @import url('https://fonts.googleapis.com/css?family=Work+Sans');
 *{
@@ -25,9 +26,14 @@
 }
 h1, h2, h3{
   font-family: 'Bentham', serif;
+  color:#304E6F;
 }
-p{
+p, a, label, input, button{
   font-family:'Work Sans', sans-serif;
+  color:#304E6F;
+}
+.attention{
+  color:red;
 }
 img{
   max-width:100%;
@@ -35,9 +41,123 @@ img{
 section{
   margin:3em 0;
 }
-section.zebra:nth-child(even){
+section.zebra:nth-child(odd){
   background:#DCF3D7;
 }
+.page-header{
+     position: absolute;
+     padding: 1em;
+     width: 100%;
+     top: 0;
+     left: 0;
+     z-index: 100;
+   }
+   .page-header h1 {
+     font-size: 1.5em;
+     line-height: 1;
+     text-transform: uppercase;
+     text-align: center;
+     margin: 0;
+   }
+   .page-header .nav-icon {
+     cursor: pointer;
+     position: absolute;
+     right: 1em;
+     top: 50%;
+     transform: translateY(-50%);
+   }
+
+
+   /* .main-content */
+   .main-content {
+     margin: 3em auto;
+     /*margin: 5em auto;*/
+     max-width: 960px;
+     padding: 1em;
+   }
+
+
+   /* .main-nav */
+   .main-nav {
+     display: none; 
+     /*fake--only for now on body class--just to see before adding JS*/
+     background: #FAFDF7;
+     font-size: 1.5em;
+     font-weight: bold;
+     position: relative;
+   }
+   .main-nav ul {
+     margin-top: 1.5em;
+     list-style-type: none;
+   }
+
+   .main-nav li {
+     margin: 1em 0;
+   }
+   .main-nav a{
+    text-decoration:none;
+    text-transform: uppercase;
+    font-size:.5em;
+   }
+
+   .main-nav .close-icon {
+     font-style: normal;
+     position: absolute;
+     top: 0.9rem;
+     right:101%;
+     line-height: 1;
+     color:red;
+     cursor: pointer;
+     padding:5px;
+     font-size:1.5em;
+   }
+
+   .main-nav li {
+     position: relative;
+   }
+
+   .main-nav li.is-active:before {
+     content: '';
+     display: block;
+     border: 0.5rem solid transparent;
+     position: absolute;
+     left: -0.75em;
+     top: 50%;
+     transform: translateY(-50%);
+   }
+   
+
+   /* .nav-open
+      When the navigation sidebar is open
+      State stuff here
+   */
+   .nav-open {
+     overflow: hidden; /* cuts off page on rt side-so not overflowing example with 2.5em vlack border*/
+   }
+   .nav-open .main-nav {
+     z-index:200;
+     display: block;
+     position: absolute;
+     top: 0;
+     right: 0;
+     width: 35%;
+     min-height: 100%;  /*for cases with lots of nav elements---so can scroll
+     up and down the screen. height: 100% */
+   }
+   .nav-open .page-content  {
+     transform: translateX(50%);
+   }
+   .nav-open .page-content:before {
+     content: '';
+     display: block;
+     width: 100%;
+     height: 100%;
+     background: hsla(0, 100%, 50%, 0.60);
+     position: absolute;
+     top: 0;
+     left: 0;
+     z-index: 150;
+   }
 .circle{
   position:relative;
 }
@@ -103,8 +223,10 @@ button{
   background-color:#304E6F;
   border:none;
   color:#DCF3D7;
-  padding:.7em;
+  padding:1.2em;
   margin-top:1em;
+  text-transform: uppercase;
+  font-size:.75em;
 }
 .hero{
   position:relative;
@@ -148,7 +270,16 @@ button{
   left:50%;
   transform: translate(0, 50%);
 }
-
+input{
+  width:200px;
+  height:45px;
+  margin:10px;
+}
+footer a{
+  text-transform:uppercase;
+  font-size:.75em;
+  text-decoration:none;
+}
 /*
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
