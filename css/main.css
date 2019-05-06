@@ -35,13 +35,6 @@ img{
 section{
   margin:3em 0;
 }
-section.first{
-  position:relative;
-  top:5px;
-  z-index:-10;
-  width:100%;
-  display: block;
-}
 section.zebra:nth-child(even){
   background:#DCF3D7;
 }
@@ -139,7 +132,7 @@ button{
 .relative{
   position:relative;
 }
-.side-padding{
+.side-padding-left{
   position:absolute;
   width:29%;
   margin:15px;
@@ -147,7 +140,14 @@ button{
   left:2%;
   transform: translate(0, 50%);
 }
-
+.side-padding-right{
+  position:absolute;
+  width:29%;
+  margin:15px;
+  top:50%;
+  left:50%;
+  transform: translate(0, 50%);
+}
 
 /*
  * Remove text-shadow in selection highlight:
