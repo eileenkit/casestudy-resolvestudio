@@ -76,9 +76,18 @@ section.zebra:nth-child(even){
   float:right;
   width:66%;
 }
-
-
-
+.footer-left ul{
+  list-style-type: none;
+}
+.footer-left li{
+  float:left;
+  text-decoration:none;
+  padding:1em;
+}
+.copyright-right{
+  float:right;
+  padding:1em;
+}
 
 
 
