@@ -41,7 +41,7 @@ img{
 section{
   margin:3em 0;
 }
-section.zebra:nth-child(odd){
+section.zebra:nth-child(even){
   background:#DCF3D7;
 }
 .page-header{
@@ -106,10 +106,11 @@ section.zebra:nth-child(odd){
      top: 0.9rem;
      right:101%;
      line-height: 1;
-     color:red;
+     color:white;
      cursor: pointer;
      padding:5px;
      font-size:1.5em;
+     z-index:500;
    }
 
    .main-nav li {
@@ -144,19 +145,15 @@ section.zebra:nth-child(odd){
      min-height: 100%;  /*for cases with lots of nav elements---so can scroll
      up and down the screen. height: 100% */
    }
-   .nav-open .page-content  {
-     transform: translateX(50%);
-   }
    .nav-open .page-content:before {
      content: '';
      display: block;
-     width: 100%;
-     height: 100%;
-     background: hsla(0, 100%, 50%, 0.60);
+     width: 65%;
+     height: 120%;
+     background: hsla(60, 1%, 30%, 0.60);
      position: absolute;
      top: 0;
      left: 0;
-     z-index: 150;
    }
 .circle{
   position:relative;
